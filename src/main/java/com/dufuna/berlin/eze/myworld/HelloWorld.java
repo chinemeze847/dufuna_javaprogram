@@ -1,4 +1,4 @@
-package myworld;
+package com.dufuna.berlin.eze.myworld;
 
 public class HelloWorld
 {
