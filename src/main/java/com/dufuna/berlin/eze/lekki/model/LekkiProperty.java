@@ -1,12 +1,14 @@
 package com.dufuna.berlin.eze.lekki.model;
 
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
 import java.util.Date;
 
 public class LekkiProperty
 {
-    private int PropertyId;
-    private String PropertyAddress;
-    private String PropertyType;
+    private int propertyId;
+    private String propertyAddress;
+    private String propertyType;
     private int numOfBedrooms;
     private int numOfSittingRooms;
     private int numOfKitchens;
@@ -17,28 +19,35 @@ public class LekkiProperty
     private Date ValidFrom;
     private Date ValidTo;
 
+    //for testing in the MockLekkiPropertyApp
+    public LekkiProperty(int id, String address, String type) {
+        propertyId = id;
+        propertyAddress = address;
+        propertyType = type;
+    }
+
     public int getPropertyId() {
-        return PropertyId;
+        return propertyId;
     }
 
     public void setPropertyId(int propertyId) {
-        PropertyId = propertyId;
+        this.propertyId = propertyId;
     }
 
     public String getPropertyAddress() {
-        return PropertyAddress;
+        return propertyAddress;
     }
 
     public void setPropertyAddress(String propertyAddress) {
-        PropertyAddress = propertyAddress;
+        this.propertyAddress = propertyAddress;
     }
 
     public String getPropertyType() {
-        return PropertyType;
+        return propertyType;
     }
 
     public void setPropertyType(String propertyType) {
-        PropertyType = propertyType;
+        this.propertyType = propertyType;
     }
 
     public int getNumOfBedrooms() {
@@ -115,16 +124,33 @@ public class LekkiProperty
 
     @Override
     public int hashCode() {
-        return getPropertyId();
+
+        return new HashCodeBuilder(17, 37)
+                .append(getPropertyId()).hashCode();
     }
 
     @Override
-    public boolean equals(Object obj) {
-        return obj.equals(getPropertyId());
+    public boolean equals(Object obj)
+    {
+        if ( obj == null)
+            return false;
+
+        if (this == null )
+            return false;
+
+        if ((obj instanceof LekkiProperty) && (((LekkiProperty) obj).getPropertyId() == this.getPropertyId())) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     @Override
     public String toString() {
-        return getPropertyId() + ", " + getPropertyAddress() + ", " + getPropertyType();
+        return "LekkiProperty { " +
+                "propertyAddress = '" + getPropertyAddress() + '\'' +
+                ", propertyType = '" + getPropertyType() + '\'' +
+                ", propertyId = " + getPropertyId() +
+                '}';
     }
 }
