@@ -26,6 +26,10 @@ public class LekkiProperty
         propertyType = type;
     }
 
+    //No args constructor
+    public LekkiProperty() {
+    }
+
     public int getPropertyId() {
         return propertyId;
     }

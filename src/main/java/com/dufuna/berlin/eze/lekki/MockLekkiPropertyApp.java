@@ -10,15 +10,17 @@ public class MockLekkiPropertyApp
     {
         LekkiPropertyService service = new MockLekkiPropertyService();
 
-        //instantiating the properties
-        LekkiProperty property1 = new LekkiProperty(1,"lago","bed room flat");
-        LekkiProperty property2 = new LekkiProperty(2, "China","bungalow");
-        LekkiProperty property3 = new LekkiProperty(3, "Zuri","Duplex");
+        String[] addresses = {"lekki","lagos","jos","rivers","canada"};
+        String[] types = {"flat","bungalow","duplex","storey building","one storey"};
 
-        //saving the properties
-        service.saveProperty(property1);
-        service.saveProperty(property2);
-        service.saveProperty(property3);
+        //instantiating the properties
+        for(int i=0 ; i<5; i++){
+            LekkiProperty property = new LekkiProperty(i,addresses[i],types[i]);
+            service.saveProperty(property);
+
+            //getting one property
+            System.out.println(service.getProperty(i));
+        }
 
         //returning all properties
         System.out.println(service.getAllProperties());
