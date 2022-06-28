@@ -9,17 +9,17 @@ import java.util.Map;
 
 public class SimpleLekkiPropertyRepositoryImpl implements SimpleLekkiPropertyRepository
 {
-    Map<Integer, LekkiProperty> properties = new HashMap<>();
+    public Map<Integer, LekkiProperty> properties = new HashMap<>();
 
     @Override
-    public void save(LekkiProperty property) {
-          properties.put(property.getPropertyId(),property);
+    public LekkiProperty save(LekkiProperty property) {
+          return properties.put(property.getPropertyId(),property);
     }
 
     @Override
     public LekkiProperty findById(int propertyId) {
         for(Map.Entry<Integer,LekkiProperty> prop : properties.entrySet()){
-            if(prop.getKey().equals(propertyId))
+            if(prop.getKey() == propertyId)
                 return prop.getValue();
         }
         return null;

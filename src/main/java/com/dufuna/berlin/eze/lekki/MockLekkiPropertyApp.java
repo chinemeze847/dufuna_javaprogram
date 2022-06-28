@@ -8,9 +8,19 @@ public class MockLekkiPropertyApp
 {
     public static void main(String[] args)
     {
-        LekkiProperty property = new LekkiProperty();
         LekkiPropertyService service = new MockLekkiPropertyService();
-        service.saveProperty(property);
-        service.getProperty();
+
+        //instantiating the properties
+        LekkiProperty property1 = new LekkiProperty(1,"lago","bed room flat");
+        LekkiProperty property2 = new LekkiProperty(2, "China","bungalow");
+        LekkiProperty property3 = new LekkiProperty(3, "Zuri","Duplex");
+
+        //saving the properties
+        service.saveProperty(property1);
+        service.saveProperty(property2);
+        service.saveProperty(property3);
+
+        //returning all properties
+        System.out.println(service.getAllProperties());
     }
 }
