@@ -1,2 +1,2 @@
-# dufuna_javaprogram
-A helloworld program
+# Description
+A program that emulates a simple decoupled application
