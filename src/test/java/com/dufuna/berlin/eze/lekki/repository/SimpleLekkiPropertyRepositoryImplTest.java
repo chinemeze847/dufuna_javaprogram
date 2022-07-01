@@ -14,6 +14,10 @@ class SimpleLekkiPropertyRepositoryImplTest {
     @SuppressWarnings({})
     private SimpleLekkiPropertyRepository repository = new SimpleLekkiPropertyRepositoryImpl();
 
+    /**
+     * A method that test the save test
+     * method of the service class
+     */
     @Test
     void saveTest() {
         //creating a property
@@ -27,6 +31,10 @@ class SimpleLekkiPropertyRepositoryImplTest {
         assertEquals(repository.findById(1),property1);
     }
 
+    /**
+     * A method that test the findById method of the
+     * service class
+     */
     @Test
     void findByIdTest()
     {
@@ -43,6 +51,10 @@ class SimpleLekkiPropertyRepositoryImplTest {
         assertEquals(repository.findById(3),property2);
     }
 
+    /**
+     * A method that test the findAllProperties method from
+     * the service class
+     */
     @Test
     void findAllPropertiesTest()
     {
@@ -68,8 +80,12 @@ class SimpleLekkiPropertyRepositoryImplTest {
         assertEquals(listOfProperties,repository.findAll());
     }
 
+    /**
+     * A method that test the update method of
+     * the service class
+     */
     @Test
-    void update()
+    void updateTest()
     {
         //creating a property
         LekkiProperty property1 = new LekkiProperty(7,"Egypt","Flat");
