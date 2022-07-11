@@ -1,7 +1,6 @@
 package com.dufuna.berlin.eze.tax.model;
 
 
-
 public class TaxBracket
 {
     public static final double HIGH_LIMIT_1 = 18200;
@@ -19,5 +18,4 @@ public class TaxBracket
     public static final double RATE_2 = 0.19;
     public static final double RATE_3 = 0.325;
     public static final double RATE_4 = 0.37;
-    public static final double RATE_5 = 0.45;
 }

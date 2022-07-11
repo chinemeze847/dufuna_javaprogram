@@ -2,15 +2,17 @@ package com.dufuna.berlin.eze.tax;
 
 
 import com.dufuna.berlin.eze.tax.service.TaxService;
-import com.dufuna.berlin.eze.tax.service.TaxServiceImpl;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@SpringBootApplication
+@Configuration
 public class TaxCalculatorApp {
-    public static void main(String[] args)
-    {
-        TaxService service = new TaxServiceImpl();
-        System.out.println(service.calculateTax(90000));
-        System.out.println(service.calculateTax(120000));
-        System.out.println(service.calculateTax(190000));
-    }
 
+    public static void main(String[] args) {
+        SpringApplication.run(TaxCalculatorApp.class, args);
+    }
 }

@@ -1,7 +1,11 @@
 package com.dufuna.berlin.eze.tax.service;
 
 import com.dufuna.berlin.eze.tax.model.TaxBracket;
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Service;
 
+@Service
+@Primary
 public class TaxServiceImpl implements TaxService{
 
     TaxBracket bracket = new TaxBracket();
