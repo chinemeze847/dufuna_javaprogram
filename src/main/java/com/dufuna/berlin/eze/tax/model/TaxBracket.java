@@ -1,6 +1,9 @@
 package com.dufuna.berlin.eze.tax.model;
 
-
+/**
+ * This class models tax bracket with
+ * predefined limits and rates
+ */
 public class TaxBracket
 {
     public static final double HIGH_LIMIT_1 = 18200;

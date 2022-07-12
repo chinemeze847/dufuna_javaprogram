@@ -11,6 +11,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+/**
+ * This class is in change of presenting
+ * my data to the user is a well formated
+ * manner
+ */
 public class TaxResponse
 {
     @JsonProperty

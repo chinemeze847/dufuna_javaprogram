@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.security.RolesAllowed;
 import javax.servlet.http.HttpServletRequest;
 
 
@@ -31,14 +32,15 @@ public class TaxController
      * @return the tax to be paid
      */
     @PostMapping("/{income}")
+    @RolesAllowed({"user", "admin"})
     public ResponseEntity<TaxResponse> calculateTax(@PathVariable int income, HttpServletRequest request)
     {
         double tax = service.calculateTax(income);
 
-        String name = request.getParameter("name");
-        String level = request.getParameter("level");
-
-        log.info("my name is {} and am in level {}",name,level);
+//        String name = request.getParameter("name");
+//        String level = request.getParameter("level");
+//
+//        log.info("my name is {} and am in level {}",name,level);
 
         //Using the builder pattern to build my response object
         TaxResponse response = TaxResponse.builder()
@@ -49,5 +51,12 @@ public class TaxController
         TaxResponse reponse = new TaxResponse(income,tax);
 
         return ResponseEntity.ok(response);
+    }
+
+    @GetMapping("/admin")
+    @RolesAllowed("admin")
+    public String adminAllowed()
+    {
+        return "you successfully login as Admin";
     }
 }
