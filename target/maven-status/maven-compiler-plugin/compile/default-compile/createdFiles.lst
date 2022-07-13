@@ -1,0 +1,15 @@
+com\dufuna\berlin\eze\lekki\repository\SimpleLekkiPropertyRepository.class
+com\dufuna\berlin\eze\lekki\repository\SimpleLekkiPropertyRepositoryImpl.class
+com\dufuna\berlin\eze\lekki\service\MockLekkiPropertyService.class
+com\dufuna\berlin\eze\lekki\MockLekkiPropertyApp.class
+com\dufuna\berlin\eze\lekki\model\LekkiProperty.class
+com\dufuna\berlin\eze\tax\dto\TaxResponse$TaxResponseBuilder.class
+com\dufuna\berlin\eze\tax\controller\TaxController.class
+com\dufuna\berlin\eze\tax\service\TaxServiceImpl.class
+com\dufuna\berlin\eze\tax\model\TaxBracket.class
+com\dufuna\berlin\eze\tax\config\SecurityConfig.class
+com\dufuna\berlin\eze\tax\TaxCalculatorApp.class
+com\dufuna\berlin\eze\address\AddressApp.class
+com\dufuna\berlin\eze\lekki\service\LekkiPropertyService.class
+com\dufuna\berlin\eze\tax\service\TaxService.class
+com\dufuna\berlin\eze\tax\dto\TaxResponse.class
