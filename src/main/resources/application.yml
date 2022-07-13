@@ -1,5 +1,5 @@
 server:
-  port: 8081
+  port: 8090
 
 keycloak:
   auth-server-url: http://localhost:9090/
