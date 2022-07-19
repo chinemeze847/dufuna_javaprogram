@@ -6,7 +6,7 @@ A program that consist of several tasks on the path of becoming Java experts for
 which contains one class that prints Hello World
 
 ###Lekki Package 
-This package constains three packages which are
+This package contains three packages which are
 the model, repository , service and also a main class which is a MockLekkiPropertyApp
 
 ####Model package
@@ -15,7 +15,7 @@ methods
 
 ####Repository package
 It contains an interface(SimpleLekkiPropertyRepository) and 
-its implimentation(SimpleLekkiPropertyRepositoryImpl) which are 
+its implementation(SimpleLekkiPropertyRepositoryImpl) which are 
 used to save the data in a HashMap
 
 ####Service package
