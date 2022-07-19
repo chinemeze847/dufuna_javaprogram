@@ -53,10 +53,21 @@ public class TaxController
         return ResponseEntity.ok(response);
     }
 
+    /**
+     * Test keycloak
+     * @return successful if successfully logged in
+     */
     @GetMapping("/admin")
     @RolesAllowed("admin")
     public String adminAllowed()
     {
         return "you successfully login as Admin";
+    }
+
+
+    @GetMapping("/welcome")
+    public String welcome()
+    {
+        return "Welcome to my property app in docker container";
     }
 }
